@@ -21,9 +21,11 @@ public class MyProject extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("MainInterface.fxml"));
         
+        
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
+        stage.setTitle("My Font Changer");
         stage.show();
     }
 
