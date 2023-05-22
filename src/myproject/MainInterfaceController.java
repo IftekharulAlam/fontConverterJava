@@ -57,7 +57,6 @@ public class MainInterfaceController implements Initializable {
     }
 
     private void newMenuItem(ActionEvent event) {
-        
 
     }
 
@@ -126,6 +125,9 @@ public class MainInterfaceController implements Initializable {
 
         Stage stage = new Stage();
         File selectedFile = fileChooser.showOpenDialog(stage);
+        fileHandling f = new fileHandling();
+ 
+        myinput.setText(f.DataRead(selectedFile));
 
     }
 

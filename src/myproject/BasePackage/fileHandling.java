@@ -5,8 +5,10 @@
  */
 package myproject.BasePackage;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -45,6 +47,40 @@ public class fileHandling {
 
             }
         }
+
+    }
+
+    public String DataRead(File file) {
+        String s = "";
+
+        FileReader fr = null;
+        BufferedReader br = null;
+
+        try {
+
+            fr = new FileReader(file);;
+
+        } catch (Exception ex) {
+
+        }
+
+        br = new BufferedReader(fr);
+
+        try {
+            s = br.readLine();
+
+        } catch (IOException ex) {
+
+        } finally {
+
+            try {
+                br.close();
+
+            } catch (Exception ex) {
+
+            }
+        }
+        return s;
 
     }
 
